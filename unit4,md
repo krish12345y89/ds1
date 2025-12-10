@@ -1,0 +1,265 @@
+
+
+# 🟩 **UNIT-4 — SORTING & HASHING (FULL EXAM-NOTES in Hinglish)**
+
+---
+
+# ⭐ **PART–A: SORTING (Very Important)**
+
+Sorting = elements ko **increasing ya decreasing** order me arrange karna.
+
+---
+
+# 🔶 **1. Selection Sort**
+
+### **Idea:**
+
+Har step me **minimum element find** karke correct position par swap karo.
+
+### **Algorithm:**
+
+1. i = 0 se n–1 tak
+2. min_index find karo (i to n–1)
+3. Swap arr[i] with arr[min_index]
+
+### **Time Complexity:**
+
+* Best = O(n²)
+* Worst = O(n²)
+* Space = O(1)
+
+### **Use:**
+
+Chota array, easy implementation.
+
+---
+
+# 🔶 **2. Bubble Sort**
+
+### **Idea:**
+
+Adjacent elements ko compare karke **bade element ko bubble karke end tak** bhejte hain.
+
+### **Process:**
+
+* Har pass me largest element end pe chala jata hai.
+
+### **Complexity:**
+
+* Best = O(n) (if optimized with swap flag)
+* Worst = O(n²)
+
+Face-to-face exam me bubble explain karna must hota hai.
+
+---
+
+# 🔶 **3. Insertion Sort**
+
+### **Idea:**
+
+List ko 2 parts me treat karte hain: **sorted + unsorted**
+Har element ko correct position me insert karte hain.
+
+### **Complexity:**
+
+* Best = O(n)
+* Worst = O(n²)
+* Space = O(1)
+
+### **Use:**
+
+Small datasets, nearly sorted arrays.
+
+---
+
+# 🔶 **4. Quick Sort (Most Important)**
+
+### **Idea:**
+
+Divide & Conquer
+
+* Pivot choose
+* Smaller elements left
+* Larger elements right
+
+### **Time:**
+
+* Best = O(n log n)
+* Avg = O(n log n)
+* Worst = O(n²) (when array already sorted)
+
+### **Space:** O(log n) recursion
+
+---
+
+# 🔶 **5. Merge Sort**
+
+### **Idea:**
+
+Array ko half-half divide → recursively sort → merge.
+
+### **Time:**
+
+* Best = O(n log n)
+* Worst = O(n log n)
+* Stable & good for large data
+
+### **Space:** O(n)
+
+---
+
+# 🔶 **6. Heap Sort**
+
+### **Idea:**
+
+Binary heap (max heap) banate hain → max element extract → array sorted.
+
+### **Time:**
+
+* O(n log n)
+* Space: O(1)
+
+---
+
+# 📌 **Sorting Comparison Table (Exam Favourite)**
+
+| Algorithm | Best       | Worst      | Space    | Stable? |
+| --------- | ---------- | ---------- | -------- | ------- |
+| Selection | O(n²)      | O(n²)      | O(1)     | No      |
+| Bubble    | O(n)       | O(n²)      | O(1)     | Yes     |
+| Insertion | O(n)       | O(n²)      | O(1)     | Yes     |
+| Quick     | O(n log n) | O(n²)      | O(log n) | No      |
+| Merge     | O(n log n) | O(n log n) | O(n)     | Yes     |
+| Heap      | O(n log n) | O(n log n) | O(1)     | No      |
+
+---
+
+# ⭐ **PART–B: HASHING**
+
+Hashing = fast searching ka technique
+Goal → **O(1) average time** for search, insert, delete.
+
+---
+
+# 🔶 **1. Hash Function**
+
+Converts key → index
+`h(key) = key % table_size`
+
+### Good hash function:
+
+✔ Uniform distribution
+✔ Fast to compute
+✔ Minimum collisions
+
+---
+
+# 🔶 **2. Collision**
+
+Jab 2 keys same index pe aaye → collision hota hai.
+
+---
+
+# ⭐ **Collision Resolution Techniques**
+
+---
+
+# 🔵 **1. Open Addressing**
+
+### **(A) Linear Probing**
+
+Index fill ho to
+
+```
+index = (index + 1) % size
+```
+
+Problem: Clustering
+
+---
+
+### **(B) Quadratic Probing**
+
+```
+index = (h(key) + i^2) % size
+```
+
+Less clustering.
+
+---
+
+### **(C) Double Hashing**
+
+```
+index = h1(key) + i * h2(key)
+```
+
+Best among open addressing.
+
+---
+
+# 🔵 **2. Separate Chaining (IMPORTANT)**
+
+Har index par ek **linked list** bani hoti hai.
+
+Collision → same index par linked list me add.
+
+**Pros:**
+✔ No clustering
+✔ Easy deletion
+
+**Time:**
+
+* Best = O(1)
+* Worst = O(n)
+
+---
+
+# ⭐ **Load Factor**
+
+```
+α = number of elements / table size
+```
+
+Load factor high → collisions badh jate hain.
+
+---
+
+# ⭐ **3. Applications of Hashing**
+
+* Password storage
+* Databases
+* Compilers (symbol table)
+* Caching
+* Indexing
+
+---
+
+# 📌 **Graph – Basic Concepts (As per syllabus)**
+
+### Includes:
+
+✔ Graph meaning
+✔ Types (directed, undirected, weighted, unweighted)
+✔ Representation → **Adjacency List & Matrix**
+✔ BFS & DFS
+✔ Complexity of traversals
+
+(Ye main already fully de chuka hoon — agar chaho to isko bhi summarize kar du.)
+
+---
+
+# 💥 **MOST IMPORTANT 10 MARKERS (UNIT-4)**
+
+1. Selection vs Insertion vs Bubble (table compare)
+2. Quick sort algorithm + example
+3. Merge sort algorithm + merge function
+4. Collision resolution techniques
+5. Hash function characteristics
+6. Linear vs quadratic vs double hashing
+7. Adjacency matrix vs adjacency list
+8. BFS vs DFS
+9. Heap creation + heap sort
+10. Hashing applications
+
+---
